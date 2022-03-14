@@ -29,17 +29,14 @@ const app = new Vue({
     },
     methods: {
         deleteTodo(indexTodo) {
-            this.arrTodo.splice(indexTodo, 1)
+            this.arrTodo.splice(indexTodo, 1);
         },
         addNewTodo() {
             if (this.newTodo.todoText != '') {
                 
-                this.newTodo = {
-                    todoText: '',
-                    done: false
-                }
                 this.arrTodo.unshift(this.newTodo);
             }
+            this.newTodo = { todoText: '', done: false };
         } 
     }
 
