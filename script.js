@@ -1,8 +1,14 @@
 const app = new Vue({
     el: '#root',
     data: {
-        newTodo: '',
-        arrToDo: [
+        newTodo: 
+            {
+                todoText: '',
+                done: false
+
+            },
+        
+        arrTodo: [
             {
                 todoText: 'fare esercizio js',
                 done: false
@@ -23,8 +29,18 @@ const app = new Vue({
     },
     methods: {
         deleteTodo(indexTodo) {
-            this.arrToDo.splice(indexTodo, 1)
+            this.arrTodo.splice(indexTodo, 1)
+        },
+        addNewTodo() {
+            if (this.newTodo.todoText != '') {
+                
+                this.newTodo = {
+                    todoText: '',
+                    done: false
+                }
+                this.arrTodo.unshift(this.newTodo);
+            }
         } 
     }
 
-})  
+})
