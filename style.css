@@ -45,6 +45,15 @@
     padding-top: 1em;
     padding-bottom: 1em;
     border-bottom: 1px solid black;
+    cursor: pointer;
+}
+
+.todo-item-done {
+    text-decoration: line-through;
+}
+
+.todo-item:hover {
+    background-color: white;
 }
 
 .btn-delete-todo {

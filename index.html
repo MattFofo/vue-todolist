@@ -13,19 +13,15 @@
         <div id="root" class="container">
             
             <div class="add-new-todo">
-                <input type="text" name="todo-input" id="todo-input" placeholder="cosa vuoi dimenticare?" size="5">
+                <input v-model="newTodo" type="text" name="todo-input" id="todo-input" placeholder="cosa vuoi dimenticare?" size="5">
                 <button>Add</button>
             </div>
 
 
             <ul class="todo-list">
-                <li class="todo-item">
-                    <div class="todo-item-text">fare i compiti</div>
-                    <button class="btn-delete-todo">X</button>
-                </li>
-                <li class="todo-item">
-                    <div class="todo-item-text">fare i compiti</div>
-                    <button class="btn-delete-todo">X</button>
+                <li v-for="(todo, index) in arrToDo" @click="todo.done = !todo.done" :class="todo.done ? 'todo-item-done' : ''" class="todo-item">
+                    <div class="todo-item-text">{{ todo.todoText }}</div>
+                    <button @click="deleteTodo(index)" class="btn-delete-todo">X</button>
                 </li>
             </ul>
 
