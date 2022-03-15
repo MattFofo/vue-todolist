@@ -14,7 +14,7 @@
             
             <div class="add-new-todo">
 
-                <input v-model="newTodo.todoText" type="text" name="todo-name" id="todo-name" placeholder="cosa vuoi dimenticare?" size="5">
+                <input v-model.trim="newTodo.todoText" type="text" name="todo-name" id="todo-name" placeholder="cosa vuoi dimenticare?" size="5">
 
                 <button @click="addNewTodo">Add</button>
             </div>
@@ -32,9 +32,6 @@
                 </li>
             </ul>
         </div>
-
-
-        
 
 
 

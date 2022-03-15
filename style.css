@@ -47,9 +47,10 @@
     justify-content: space-between;
     padding-top: 1em;
     padding-bottom: 1em;
+    padding-left: .5rem;
     margin-left: 1rem;
     margin-right: 1rem;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid grey;
     cursor: pointer;
 }
 
@@ -58,11 +59,18 @@
 }
 
 .todo-item:hover {
-    background-color: white;
+    background-color: rgb(188, 199, 209);
 }
 
 .btn-delete-todo {
+    cursor: pointer;
     border: none;
     background-color: inherit;
+    opacity: .5;
     padding-right: 1em;
+}
+
+
+.btn-delete-todo:hover {
+    opacity: 1;
 }

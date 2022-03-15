@@ -34,9 +34,10 @@ const app = new Vue({
         addNewTodo() {
             if (this.newTodo.todoText != '') {
                 
-                this.arrTodo.unshift(this.newTodo);
+                this.arrTodo.unshift({...this.newTodo});
+                this.arrTodo.todoText = '';
             }
-            this.newTodo = { todoText: '', done: false };
+            // this.newTodo = { todoText: '', done: false };
         } 
     }
 
